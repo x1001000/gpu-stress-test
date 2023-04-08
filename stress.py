@@ -34,7 +34,7 @@ logging.basicConfig(
 logging.info(f"Delay before GPU stress test loop [{args.delay}s]")
 time.sleep(args.delay)
 
-x = torch.linspace(0, 4, 16 * 1024 ** 2).cuda()
+x = torch.linspace(0, 4, 256 * 1024 ** 2).cuda()
 
 timeout = time.time() + args.runtime
 
